@@ -16,6 +16,35 @@ vim.g.mapleader = " "
 --   command_mode = "c",
 
 -- Normal --
+--" Shortcut to use blackhole register by default
+keymap( 'n','d' ,'"_d',opts )
+keymap( 'v','d' ,'"_d',opts )
+keymap( 'n', 'D', '"_D',opts )
+keymap( 'v', 'D', '"_D',opts )
+keymap( 'n', 'c', '"_c',opts )
+keymap( 'v', 'c', '"_c',opts )
+keymap( 'n', 'C', '"_C',opts )
+keymap( 'v', 'C', '"_C',opts )
+keymap( 'n', 'x', '"_x',opts )
+keymap( 'v', 'x', '"_x',opts )
+keymap( 'n', 'X', '"_X',opts )
+keymap( 'v', 'X', '"_X',opts )
+
+-- Shortcut to use clipboard with <leader>
+keymap( "n",'<leader>d','d',opts )
+keymap( "v",'<leader>d','d',opts )
+keymap( "n",'<leader>D','D',opts )
+keymap( "v",'<leader>D','D',opts )
+keymap( "n",'<leader>c','c',opts )
+keymap( "v",'<leader>c','c',opts )
+keymap( "n",'<leader>C','C',opts )
+keymap( "v",'<leader>C','C',opts )
+keymap( "n",'<leader>x','x',opts )
+keymap( "v",'<leader>x','x',opts )
+keymap( "n",'<leader>X','X',opts )
+keymap( "v",'<leader>X','X',opts )
+
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)

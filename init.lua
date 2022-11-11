@@ -1,17 +1,11 @@
-require'hop'.setup()
-require('luasnip').filetype_extend("javascript", { "javascriptreact" })
-
-require('luasnip').filetype_extend("javascript", { "html" })
-
+require('colorbuddy').colorscheme('gruvbuddy')
+--require 'lspconfig'.tsserver.setup {
 require 'lspconfig'.tsserver.setup {
   on_attach = function()
   end,
 }
 
-require 'lspconfig'.tailwindcss.setup {
-  on_attach = function()
-  end,
-}
+
 require 'lspconfig'.eslint.setup {
   on_attach = function()
   end,
@@ -27,6 +21,22 @@ require 'lspconfig'.html.setup {
   on_attach = function()
   end,
 }
+
+
+
+require('luasnip').filetype_extend("javascript", { "html" })
+
+
+require'hop'.setup()
+-- LSP config
+local lspconfig = require('lspconfig')
+local servers = { 'bashls', 'sumneko_lua', 'solargraph', 'tsserver', 'vimls' }
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup({})
+end
+
+
+
 --
 -- Settings
 ---
@@ -73,7 +83,7 @@ vim.opt.undofile = true                         -- enable persistent undo
 vim.opt.updatetime = 300                        -- faster completion (4000ms default)
 vim.opt.writebackup = false                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 vim.opt.cursorline = true                       -- highlight the current line
-vim.opt.cursorcolumn=true 
+vim.opt.cursorcolumn=true
 vim.opt.laststatus = 3
 vim.opt.showcmd = false
 vim.opt.ruler = true
@@ -98,7 +108,7 @@ vim.opt.listchars:append "eol:↴"
 vim.opt.syntax = "ON"
 vim.opt.termguicolors = true
 vim.opt.fillchars = { eob = " " }
-vim.cmd[[colorscheme neosolarized]]
+--vim.cmd[[colorscheme gruvbuddy]]
 --Lua:
 
 
@@ -134,6 +144,7 @@ use 'mattn/emmet-vim'
 use { 'kazhala/close-buffers.nvim' }
 -- using packer.nvim
   -- 
+use 'tjdevries/gruvbuddy.nvim'
   use 'nacro90/numb.nvim'
 use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
   --
@@ -189,15 +200,16 @@ use {
 use {'norcalli/nvim-colorizer.lua'}
   use "tjdevries/colorbuddy.nvim"
 --  use "ironhouzi/starlite-nvim"
-
+use 'rktjmp/lush.nvim'
+use 'RishabhRD/gruvy'
   --use "bronson/vim-visual-star-search"
+use "xiyaowong/nvim-transparent"
 
 use {'tpope/vim-surround'}
-  -- colorscheme
+--   colorscheme
   use 'windwp/nvim-ts-autotag'
-  require('neosolarized').setup({
-    comment_italics = true,
-  })
+--  require('gruvbuddy').setup({
+--  })
 use('MunifTanjim/prettier.nvim')
 local prettier = require("prettier")
 
@@ -269,7 +281,7 @@ end)
 -- Setup colorscheme
 vim.opt.termguicolors = true
 vim.o.background = "dark"
-pcall(vim.cmd, 'colorscheme neosolarized')
+pcall(vim.cmd, 'colorscheme grubbuddy')
 
 -- LSP setup
 local lsp = require('lsp-zero')
