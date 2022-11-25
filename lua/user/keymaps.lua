@@ -1,4 +1,4 @@
--- Shorten function name
+
 local keymap = vim.keymap.set
 -- Silent keymap option
 local opts = { silent = true }
@@ -7,7 +7,7 @@ local opts = { silent = true }
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
--- Modes
+-- Modes(ie what the first keymap argument correspands to!!!)
 --   normal_mode = "n",
 --   insert_mode = "i",
 --   visual_mode = "v",
@@ -31,18 +31,18 @@ keymap( 'n', 'X', '"_X',opts )
 keymap( 'v', 'X', '"_X',opts )
 
 -- Shortcut to use clipboard with <leader>
-keymap( "n",'<leader>d','d',opts )
-keymap( "v",'<leader>d','d',opts )
-keymap( "n",'<leader>D','D',opts )
-keymap( "v",'<leader>D','D',opts )
-keymap( "n",'<leader>c','c',opts )
-keymap( "v",'<leader>c','c',opts )
-keymap( "n",'<leader>C','C',opts )
-keymap( "v",'<leader>C','C',opts )
-keymap( "n",'<leader>x','x',opts )
-keymap( "v",'<leader>x','x',opts )
-keymap( "n",'<leader>X','X',opts )
-keymap( "v",'<leader>X','X',opts )
+keymap( "n",';d','d',opts )
+keymap( "v",';d','d',opts )
+keymap( "n",';D','D',opts )
+keymap( "v",';D','D',opts )
+keymap( "n",';c','c',opts )
+keymap( "v",';c','c',opts )
+keymap( "n",';C','C',opts )
+keymap( "v",';C','C',opts )
+keymap( "n",';x','x',opts )
+keymap( "v",';x','x',opts )
+keymap( "n",';X','X',opts )
+keymap( "v",';X','X',opts )
 
 
 -- Better window navigation
@@ -58,20 +58,27 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
---keymap("n", "<S-l>", ":bnext<CR>", opts)
---keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "]b", ":bnext<CR>", opts)
+keymap("n", "[b", ":bprevious<CR>", opts)
+keymap("n", "[B", ":bfirst<CR>", opts)
+keymap("n", "]B", ":blast<CR>", opts)
+     -- Close buffers
+ keymap("n","<C-q>",":bd<Cr>",opts)
+     --buffer back
+keymap("n", "<leader>b", "<c-^>",opts )
+
+
+
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
--- Close buffers
-keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
 -- Insert --
--- Press jk fast to enter
+-- Press jk fast to re-enter normal mode
 keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
@@ -87,7 +94,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
-keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
+keymap("n", "<leader>fp", ":Telescope project<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n",'<leader>kk', [[<cmd>lua require('telescope.builtin').keymaps()<cr>]],opts)
 
@@ -95,9 +102,12 @@ keymap("n",'<leader>kk', [[<cmd>lua require('telescope.builtin').keymaps()<cr>]]
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 -- Comment
-keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
-keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
-
+--keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
+--keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.current()<cr>", opts)
+--wrongkeymap('n', "<leader>/", api.toggle.linewise.current,opts)
+--keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
+--keymap("n", "<leader>/", "<cmd>lua require
+--('Comment.api').toggle_current_linewise()<CR>", opts)
 -- DAP
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
 keymap("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", opts)
@@ -114,12 +124,31 @@ keymap("n", "<leader>zz", '<CMD>lua require("FTerm").toggle()<CR>', opts)
 keymap('t', '<leader>zz', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
 
 
+--insert mode big D delete!!!!!
+keymap("i", "<C-d>","<C-O>D",opts)
+
+--toggle spellcheck
+local function vim_opt_toggle(opt, on, off, name)
+  local message = name
+  if vim.opt[opt]:get() == off then
+    vim.opt[opt] = on
+    message = message .. " Enabled"
+  else
+    vim.opt[opt] = off
+    message = message .. " Disabled"
+  end
+  vim.notify(message)
+end
+
+vim.keymap.set("n", "<leader>s", function()
+  vim_opt_toggle("spell", true, false, "Spelling")
+end)
 -- place this in one of your configuration file(s)
 keymap('n', '<leader>nn', "<cmd>lua require'hop'.hint_anywhere()<cr>", opts)
 keymap('n', '<leader>xx', "<cmd>lua require'hop'.hint_words()<cr>", opts)
 keymap('n', '<leader>pp', "<cmd>lua require'hop'.hint_patterns()<cr>", opts)
 keymap('n', '<leader>ww', "<cmd>lua require'hop'.hint_char1()<cr>", opts)
-vim.api.nvim_set_keymap('', 'f', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = false })<cr>", {})
-vim.api.nvim_set_keymap('', 'F', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = false })<cr>", {})
-vim.api.nvim_set_keymap('', 't', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = false, hint_offset = -1 })<cr>", {})
-  vim.api.nvim_set_keymap('', 'T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = false, hint_offset = 1 })<cr>", {})
+--vim.api.nvim_set_keymap('', 'f', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = false })<cr>", {})
+--vim.api.nvim_set_keymap('', 'F', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = false })<cr>", {})
+--vim.api.nvim_set_keymap('', 't', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = false, hint_offset = -1 })<cr>", {})
+-- vim.api.nvim_set_keymap('', 'T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = false, hint_offset = 1 })<cr>", {})
