@@ -1,4 +1,4 @@
-require('colorbuddy').colorscheme('gruvbuddy')
+--require('colorbuddy').colorscheme('gruvbuddy')
 require 'lspconfig'.tsserver.setup {
   on_attach = function()
   end,
@@ -30,7 +30,6 @@ end
 require "user.keymaps"
 require "user.lspsaga"
 require "user.telescope"
---require "user.toggleterm"
 require "user.treesitter"
 require "user.bufferline"
 require "user.dap"
@@ -46,7 +45,12 @@ require "user.numb"
 require "user.scrollbar"
 require "user.colorizer"
 require "user.blankline"
-vim.cmd('abb teh the')
+
+--this works - we ought to modulize!!!!
+vim.cmd('abb arr ()=>{}')
+vim.cmd('abb rqr (req,res)=>{}')
+
+
 --the plugins start here
 require('packer').startup(function(use)
   -- packer can update itself
@@ -56,9 +60,6 @@ require('packer').startup(function(use)
 use 'mhinz/vim-startify'
   use 'kevinhwang91/nvim-hlslens'
   use 'ggandor/lightspeed.nvim' --term
-  -- scrollbar
-  use("petertriho/nvim-scrollbar")
-  require("scrollbar").setup()
   --hop
   use {
     'phaazon/hop.nvim',
@@ -84,7 +85,7 @@ use({
   use 'mattn/emmet-vim'
   use 'maxmellon/vim-jsx-pretty'
   use "RRethy/vim-illuminate"
-  use 'stevearc/dressing.nvim'
+   use 'stevearc/dressing.nvim'
   --tan connect
   use { 'kazhala/close-buffers.nvim' }
   -- using packer.nvim
@@ -135,11 +136,12 @@ require("nvim-gps").setup()
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
   use { 'norcalli/nvim-colorizer.lua' }
-  use "tjdevries/colorbuddy.nvim"
-  --  use "ironhouzi/starlite-nvim"
+  use "Th3Whit3Wolf/one-nvim"
+ use "tjdevries/colorbuddy.nvim"
+    use "ironhouzi/starlite-nvim"
   use 'rktjmp/lush.nvim'
   use 'RishabhRD/gruvy'
-  --use "bronson/vim-visual-star-search"
+  use "bronson/vim-visual-star-search"
   use "xiyaowong/nvim-transparent"
   use { 'tpope/vim-surround' }
   --   colorscheme
@@ -163,10 +165,13 @@ use "jose-elias-alvarez/null-ls.nvim"
         requires = { { 'nvim-lua/plenary.nvim' } }
       }
       use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
-    
-  
--- Project
+ --Project
 use { 'nvim-telescope/telescope-project.nvim' }
   require'telescope'.load_extension('project')
+
+
+
+
+
 end)
 
