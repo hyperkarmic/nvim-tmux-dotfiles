@@ -1,4 +1,3 @@
-
 local keymap = vim.keymap.set
 local opts = { silent = true }
 
@@ -13,7 +12,7 @@ vim.g.mapleader = " "
 -- Normal
 --" Shortcut to use blackhole register by default
 --keymap( 'n','¬' ,'_d',opts )
- --keymap( 'n','d' ,'"_d',opts )
+--keymap( 'n','d' ,'"_d',opts )
 -- keymap( 'v','d' ,'"_d',opts )
 -- keymap( 'n', 'D', '"_D',opts )
 -- keymap( 'v', 'D', '"_D',opts )
@@ -47,12 +46,12 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 --move line
-keymap("n","<M-Down>",":m .+1<CR>==",opts)
-keymap("v","<M-Down>",":m '>+1<CR>gv=gv",opts)
-keymap("i","<M-Down>","<ESC>:m .+1<CR>==gi",opts)
-keymap("n","<M-Up>",":m .-2<CR>==",opts)
-keymap("v","<M-Up>",":m '<-2<CR>gv=gv",opts)
-keymap("i","<M-Up>","<ESC>:m .-2<CR>==gi",opts)
+keymap("n", "<M-Down>", ":m .+1<CR>==", opts)
+keymap("v", "<M-Down>", ":m '>+1<CR>gv=gv", opts)
+keymap("i", "<M-Down>", "<ESC>:m .+1<CR>==gi", opts)
+keymap("n", "<M-Up>", ":m .-2<CR>==", opts)
+keymap("v", "<M-Up>", ":m '<-2<CR>gv=gv", opts)
+keymap("i", "<M-Up>", "<ESC>:m .-2<CR>==gi", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -65,14 +64,14 @@ keymap("n", "]b", ":bnext<CR>", opts)
 keymap("n", "[b", ":bprevious<CR>", opts)
 keymap("n", "[B", ":bfirst<CR>", opts)
 keymap("n", "]B", ":blast<CR>", opts)
-     -- Close buffers
- keymap("n","<C-q>",":bd<Cr>",opts)
-     --buffer back
-keymap("n", "<leader>b", "<c-^>",opts )
+-- Close buffers
+keymap("n", "<C-q>", ":bd<Cr>", opts)
+--buffer back
+keymap("n", "<leader>b", "<c-^>", opts)
 
 --center search
-keymap("n", "n", "nzzzv",opts)
-keymap("n", "N", "Nzzzv",opts)
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
 --
 
 keymap("n", "<M-q>", ":tabc<CR>", opts)
@@ -86,7 +85,7 @@ keymap("v", "p", '"_dP', opts)
 
 -- Insert --
 -- Press jk fast to re-enter normal mode
-keymap("i", "jk", "<ESC>", opts)
+--keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -100,13 +99,19 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
+
+keymap("n", "<leader>fc", ":lua require('telescope').extensions.neoclip.default()<CR>", opts)
+keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope project<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
-keymap("n",'<leader>kk', [[<cmd>lua require('telescope.builtin').keymaps()<cr>]],opts)
+keymap("n", "<leader>fs", "<cmd>Telescope grep_string<cr>", opts) -- find string under cursor in current working directory
+keymap("n", '<leader>fk', [[<cmd>lua require('telescope.builtin').keymaps()<cr>]], opts)
+keymap('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>',opts)
+keymap('n', '<leader>ft',":Telescope current_buffer_tags<CR>",opts)
+keymap('n', '<leader>fh',':Telescope harpoon marks<CR>',opts)
 
--- Git
-keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+
+
 
 -- Comment
 --keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
@@ -155,10 +160,9 @@ keymap('n', '<leader>nn', "<cmd>lua require'hop'.hint_anywhere()<cr>", opts)
 keymap('n', '<leader>xx', "<cmd>lua require'hop'.hint_words()<cr>", opts)
 keymap('n', '<leader>pp', "<cmd>lua require'hop'.hint_patterns()<cr>", opts)
 keymap('n', '<leader>ww', "<cmd>lua require'hop'.hint_char1()<cr>", opts)
-
+keymap('n', '<leader>tt', '<cmd>SymbolsOutline<CR>',opts)
 --toggle tags
 
-keymap('n', '<leader>tt', ":TagbarToggle<CR>", opts)
 --vim.api.nvim_set_keymap('', 'f', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = false })<cr>", {})
 --vim.api.nvim_set_keymap('', 'F', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = false })<cr>", {})
 --vim.api.nvim_set_keymap('', 't', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = false, hint_offset = -1 })<cr>", {})

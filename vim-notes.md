@@ -172,7 +172,7 @@ and gN matches last match.....goes straight into visual mode....
 160:the same can be done again from entering :ex from visual mode!!!(but not block)
 161: :%norm I// =======> every line in file hit!!!!!! :)
 162: :%norm D is the great file nuker!!!!!!
-163: if you use a non specific norm command... ie :.,+2 norm A **...
+163: if you use a non specific norm command... ie :.,+2 norm A \*\*...
 @: repeats the command.... like the dot-operator would do a normal one!!!!
 164:ctrl-r + ctrl-w posts word under the cursor...(or ctrl-a to move W(ord))
 (imagine the above technique with a :%s command!!!!!!)
@@ -229,7 +229,7 @@ ie :bufdo %/sausage/snake/g
 208 ]i gives list of all instances of the word under the cursor!!!
 209: :vimgrep sausage _.js finds all sneks in current directory... :cn moves to next match!!!
 and :clist gives us the list and :cc 12(etc) allows us to jump direct!!!
-210: to recursively do the same in subfolders :vimgrep sausage **/_.js
+210: to recursively do the same in subfolders :vimgrep sausage \*\*/_.js
 211: :match ErrorMsg /the/ turns every "the" match red!!!
 the pre-defined color schemes are • ErrorMsg • WarningMsg • ModeMsg • MoreMsg
 (there will be a way to edit color scheme color in the lua!!! )
@@ -274,3 +274,90 @@ the S bomb in vb mode puts whatever on every line!!!! - in tag mode gives emmet 
 248: :%norm applies norm command to every line
 also works with "surround"!!!
 249:paste mechanism works as thus - "r(reg)-count-;command
+249: :g/cup/m$ --- move all matches with cup to the bottom :)!!!!
+250: highlight TrailingWhitespace ctermbg=red guibg=red
+call matchadd("TrailingWhitespace", '\\v\\s+$')
+251::e +10 some_file.py - open at specific line inside vim!!!
+252:how to use macros like smart-bombs-examples to follow....
+10,15normal! @a
+:'&lt;,'>normal! @a
+:g/pattern/normal! @a
+253: yl ---> yank char!!!
+254:Xp (reverse backwards rather than forward)
+255: ctrl-a/k take counts...255: ctrl-a/k take counts...
+256:  ctrl-r + % gives us file name!!!
+257: in] il&lt; move to next one using "targets"
+258: H + L take counts....
+259: :1,$......the whole bloody file.....!  
+260: ctrl page up/down trick works in VIM
+261: 50GV100G - highlights like command mode!!!
+262: :tab ball - opens all open buffers into tabs
+263: e: poopy.js - another way of creating new file
+e: classiclyh short nhand for open another file!
+264: a on file tree creates new file - as well!!!!
+265: g+ctrlA increments colu,m of zeros to 12345678910
+266:put=range(10,0-1) === gives us reverse range 10,9,8 etc
+267:put=range(5)=0-4.....
+268:put=range(0,10,2) ===> 3rd argument gives increments of two
+269: t and m can be used with visual mode and marks!!!!!
+270: :g/bagel/ normal gcc --- the great comment out technique!!!!!
+271: d/poo === dtp d/poo/e === dtf
+272: :$r job.txt ----- r art bottom.....also see line numbers and 0!!!!
+272: :/penis/ r job.rtf ----> in the line  under penis!!!
+273: 1,10y b ---- this is the methodology to yanking to reg b!!!
+274:"c60yy - copy the next 60 lines to c reg!!!
+275: :-6,:5y is the backwards pattern!!!!
+276:-5,:y is the way of going to line
+277: mksession session can be recalled be using source <name>.....(seems to work only in local dir!!!)
+278: alt-n and alt-p toggle between highlighted word matches using "illuminate" plug in!!!
+279: ctrl-w + = equalises splits!!!!!
+280: ctrl-w + c closes present split!!!
+281: :vsp ==== ctrl -w v, :sp=== ctrl-w s
+282:y/v/d can all take (num)dir ie 5Vj etc!!!!!
+283: :ju list item number + ctrl I(or O depending) takes you to buffer in list!!!!
+(also ctrl-o stands for "old")
+284: changelist + count + num +g+; jumps tp change list item eg 2g;
+285: -2/+2 go to starts of line, J/K go above/below directly.....
+286:note that :-5,:y and :,+4y are quite different!!!  
+287: 1+ , 1- are nice analogues to O and ^!!!!!
+288:v === v34|-till-word 34 etc
+289: ctrl^ === alternated buffers....
+290: `(  etc goes to top pf sentence....
+291:`{ goes to start of paragraph
+(note last two hacks the equivalent of shift + (){}....)
+292:remember that "o" flips from top to bottom in V mode!!!
+293: 2gt etc tabs take motions....
+294: :tabnew - opens a clean tab!!!!
+295:tabs lists all extant tabs!!!!(also buffers)
+296:num + ctrl^ jumps tp specific buffer from buffers
+297: arge booger.html adds booger to argument list....
+(works with multiple arguments on an empty list!!!!)
+298:first/last/next/previous are the :ex commands for args!!!
+299: :grep "willies" _.js ====> adds every instance of js to qf list!!!
+300: grep -r makes search recursive in directories.  _ is a wildcard on it's very own!!!
+ie grep -r "fist" \*
+301: Telescope ctrl-q sends telescope results to qf list!!!!
+302: :cc60 - jump to the entry |60| on  list....
+303: :cdo s/foo/bar/g ----> global change command!!!!
+note | update would ususally write changes after regex but vim broked!!!
+304: :vim opens vimgrep -----> % is the modifier to search present buffer
+305: ## is the grep ending for arglist!!!!
+306: lvim is the locallist populator!!!!!
+307 s) or s" is the line operator in "surround"!!!
+308) ysiw<p> is the targets tag grammar!!!
+309)'m-3y etc.........:w
+310):'m+1
+311) /whoops ======> y//e is the code to yank  nohl areas!!!!
+312) :ab ww ()=>{} works at session level!!!!!
+and :una ww reverses it!!!!
+313):.! date --- shoots output inyo file from ex
+314) bye yanks word....
+315) g:/biff/#      ==== gives local location list of search pattern
+316)It's not well documented - but the line operator is _ ie d\_ takes a line out!
+317)gc\_\_\_ is am operator on text objects (like gu/gU!!!)
+318)you can have more than qf list :chi lists... :col/cnew allow jumping!
+319)Recursive search using VIM grep... :vimgrep TODO \*_/_
+320) ctrl-l is better than "clear" in terminal.....
+321)""p liberates text selexted with telescope clipboars chooser
+322) \`^ makes up for the missing "gi" capability on my present rig
+also note....can be used as mark without changing text!!!!!

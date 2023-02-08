@@ -3,7 +3,7 @@ local status_ok, npairs = pcall(require, "nvim-autopairs")
 if not status_ok then
   return
 end
-
+--ssss
 npairs.setup {
   check_ts = true, -- treesitter integration
   disable_filetype = { "TelescopePrompt" },
