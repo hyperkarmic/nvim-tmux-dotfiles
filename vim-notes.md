@@ -1,5 +1,5 @@
 1)ctrl+alt v toggles VIM mode from VS code.....
-1)pDot as here macro_ ONE KEY TO mOVE - ONE KEY TO EXQ!!!!!
+1)pDot as here macro* ONE KEY TO mOVE - ONE KEY TO EXQ!!!!!
 2)yfs (etIfcib you wanc)
 3)ctrl V + ascii code in insert mode!!!! or CTRL K for diagraphs
 4)viw(think in terms of visual yy-ing!!!!
@@ -8,11 +8,11 @@
 7)gj and gk are your friend!!!!
 8)remember marks can do lines ie 'a
 9)Here is the magic formula :0 norm "aP (amen!!!!)
-10)/choice\|end\\zs === the magic mapper
+10)/choice\|end\zs === the magic mapper
 11)shift + arrowkeys in insert mode to move by word!!!
 12)Vim remembers last search and can be reactivated with just a press of /!!!
 13)Number in front of search term jumps to the x-th hit!!!!
-14)note 6_ takes you to the x-th occurence of x!!!!
+14)note 6* takes you to the x-th occurence of x!!!!
 15) ea ====> lat ====> mdh i
 16):.,4y etc etc etc!!!!!
 17):1,$ etc etc etc!!!!
@@ -20,18 +20,18 @@
 19):1,10y a (how to yank to particular register)
 20)Using a capital letter appends - rather than replaces to a register is "Ayy = prev yank + new yank as bloody big string!!!
 21)Using the p?/{ to get function definition from inside {}!!!!!!
+  23)gM - moves to the center of a line!!!!
 22)g/dog/ s/dog/cat/g - replace dog with cat on every line with dog on it
-23)gM - moves to the center of a line!!!!
 24):5,$-1d  from five to less than one...
 25):g/dog/d d - delete dog and stick doggy in register d
 24):5,$-1d  from five to less than one...
 26) :g/^#/t0 - move all lines starting with hash to the top of the file
-:s/pattern/replacement/ 10 - repeat ten times... from current line
 :1,10s/pattern/rep/ 10 - that'll be the first 15 lines then..
+     :s/pattern/replacement/ 10 - repeat ten times... from current line
 27)norm 3wdaw - the holy grail patten!!!!
 28):15 norm 3wdaw
 29)Lower case every line with "useless" - :g/useless/norm gu$
-30)remember that # is the inverse _
+30)remember that # is the inverse *
 31) :g/mouse/y (yank line with mouse in it!!!!)
 32: :g/G/ norm 13i woo
 31: d^ === whitespace killer!!!!!
@@ -47,8 +47,8 @@
 43:1pu.u.u.u.u. (etc) scrolls thru delete buffers!!!!!! it works!!!!
 44: gd === n to defintion (local) gD go to global definition
 45: /line/3 or (-3) also /line/b3 or (b-3) to move cursor.  Note possible use to change contiguous words during jumps!!!! and this works with the dot operator
-46: "-p is the SMALL Items delete hole!!!!
-47: Blank 0's in column can be incremented by v-highlighting - and then pressing g+ ctrl A spherical 48: :%/n._/\\0\\r - puts a line underneath ever line containing wood.
+46: "_p is the SMALL Items delete hole!!!!
+47: Blank 0's in column can be incremented by v-highlighting - and then pressing g+ ctrl A spherical 48: :%/n.*/\0\r - puts a line underneath ever line containing wood.
 49: :10d | 11d -----> we can run more than one ex-comm this way
 50: :put =range(1,0) - draws 1-10 list over ten lines.'?A
 51: :terminal opens terminal in VIM mode:0!!!!
@@ -70,25 +70,25 @@
 68:    :e! ======> returns to last save point
 69: 138;141y - yanks the range - and moves cursor to 138!!
 70: /[^t]hoice/
-71:0put\_ --- puts line at top - has to be long form...
+71:0put_ --- puts line at top - has to be long form...
 72: :.-5 -alternative form of relative syntax
 73:ci" and ci( always get their man (pair!!O!!!)
 74:ctrl t in terminal gives a scrollable cli list of abailable files!!!!
 75:Ctrl+K on nvim tree gives files size and full path!!!
-76:Highlight using vi\[ etc and breaking out with esc takes you to the end of the block!!!:w
-77: YIB YAB YI&lt; YA> YI{ etc are psychic :) - but not in VS code :(
+76:Highlight using vi[ etc and breaking out with esc takes you to the end of the block!!!:w
+77: YIB YAB YI< YA> YI{ etc are psychic :) - but not in VS code :(
 78: :20 norm Vp - how to paste a line to a line!
 79:shift l/h jumps between buffers!!!!
 80: q: in normal mode or ctrl-r in command gives  used command list!!!
 81: :30t. - paste line 30 under present line
-82: /\\%Vfoobar - how to search in visual selection only!!!
+82: /\%Vfoobar - how to search in visual selection only!!!
 83: ctrl w + n = new window at bottom
 84: ctrl -w s  open second window on present file
 85: ctrl + alt + y deletes lines in vscode!!!
 86: ctrl-V + J joins lines en mass!!!!
 87: DAP and CAP etc follow a similar pattern to shift - {} jumps!!
 88:shift A and shift I are easily forgotten....
-89: \[[ and ]]  are alternatives for the gg/G commands!
+89: [[ and ]]  are alternatives for the gg/G commands!
 90: gp --- pastes item and puts cursor on line underneath....
 91: :sp and :vsp are the shortcuts for split!!!and work in VSCode too!
 92: ctrl e + y (move by line cursorless)
@@ -116,7 +116,7 @@
 113:subs can be done in higlighted area..... V + :s/ etc
 (note this works in visual block mode too!!!!)
 114: v3j does three lines - and then norm command can be used to paste to range ie :norm I// etc
-115: '&lt; and '> hit the beginning and end of a visual selection.
+115: '< and '> hit the beginning and end of a visual selection.
 116:ctrl o+v enters visual inside insert mode
 117: bi and ea move to ins/app at end of the word....
 118:control T indents in insert mode and ctrl-D does the opposite.
@@ -126,13 +126,13 @@
 122: shift+J unites line.  Keep cursor on upper line!!!
 123:In ? or / mode - just entered up/down arrows scroll thru prev searches
 124:alt p-alt n move to next instance in auto highlight. Doesn't work in vscode!!!
-(however - the _ locks and loads!!!!)
+(however - the * locks and loads!!!!)
 125:v% starting at { takes in whole block!!!! (also see d/y etc)
 126:yap - yanks all paragraph!!!!
 (note that VAP will take on a whole function block!!!!)
 127:+/- moves to first non-whitespace on next line!!!
 128: use gu and gU with text objects!!!!
-129: `[`] are markers for last lanked text!!!!
+129: `[  `] are markers for last lanked text!!!!
 130: di" only works on same lines....
 131:shift L(ow) takes cursor down to bottom line in viewport(shift H(igh) does opposite)
 132: shift ( goes to top line of current para - if all ()pairs match!!!
@@ -141,11 +141,11 @@
 135: 25| etc in terms of line movement!!!
 136: ctrl-] is the same gd ie go to definition!!!
 137:last positon of cursor in insert mode (gi????)
-138: \[p same as P!!!
+138: [p same as P!!!
 139: '['] work on most recently changed text as well as yank!
-140: the /pattern -V-line nN combo is special....esp with columns of identi-text!
-eymap search via telescope in LVIM = ctrl s + k
-141:v selcted areas hit with _ or / search for the whole highlighted area...
+140: the /pattern -V-line nN combo is special....esp with columns of identi-text! 
+keymap search via telescope in LVIM = ctrl s + k
+141:v selcted areas hit with * or / search for the whole highlighted area...
 142: g_lD is the cure for trailing whitespace!!!!:w
 143:  gcc triggers comment.  also gca for block and gco gcO
 144:space+3 sets off terminal!!!!
@@ -157,7 +157,7 @@ eymap search via telescope in LVIM = ctrl s + k
 150:W and B jump between key value pairs!!!!2 sends you underneath 4 2 under etc....
 151:vas-as-as-as-as highlights additional paragraphs!
 152: old: gives us a sequential list of files I just worked on!
-153:remap ctrl-c better than esc to escape insert mode!:w
+153:remap ctrl-c better than esc to escape insert mode!
 154:Macros are nothing to be scared of.  q+any-letter+key-strokes+q leaves us trigger with @+letter
 155: !!date inserts date in normal mode!
 156:   q: gives us navagatable used command list
@@ -172,7 +172,7 @@ and gN matches last match.....goes straight into visual mode....
 160:the same can be done again from entering :ex from visual mode!!!(but not block)
 161: :%norm I// =======> every line in file hit!!!!!! :)
 162: :%norm D is the great file nuker!!!!!!
-163: if you use a non specific norm command... ie :.,+2 norm A \*\*...
+163: if you use a non specific norm command... ie :.,+2 norm A **...
 @: repeats the command.... like the dot-operator would do a normal one!!!!
 164:ctrl-r + ctrl-w posts word under the cursor...(or ctrl-a to move W(ord))
 (imagine the above technique with a :%s command!!!!!!)
@@ -198,9 +198,9 @@ and gN matches last match.....goes straight into visual mode....
 184:v-mode allows for multiple line indentation using >
 185:A macro is a "executed register!!!!"
 186:row of 000000s, vis-block + g + ctrl-a === sequntial increment
-187: :%s/^\\n removes all empty lines in a buffer.
+187: :%s/^\n removes all empty lines in a buffer.
  Run :g/^$/d to delete all empty  elines.
-• Run :g/^\\s_$/d to delete all blank lines.
+• Run :g/^\s*$/d to delete all blank lines.
 188: r: 999.txt is how to insert text!!!!
 189: :put =range(1,10) gives us quick multt-line range!!!
 190: gn - go to last search term
@@ -218,7 +218,7 @@ and gN matches last match.....goes straight into visual mode....
 198:visual selection + sort sorts linewise - sort !does it reverse sort i is case insenesitive.  sort u removes duplicates!!!!
 199: gD targets global declaration
 200: ctrl-0 allows one norm mode hit in insert!!!
-201: g\~~ does whole line case flip!!!
+201: g~~ does whole line case flip!!!
 202: in fact gU or gu and the usual text object gang!!!
 203: :bufdo! applies subsequent command to all open buffers - esp useful in search/rep!
 ie :bufdo %/sausage/snake/g
@@ -226,10 +226,10 @@ ie :bufdo %/sausage/snake/g
 205: "%p gives us file name! "/p is the last search term!!!! ""p is last used register!!!
 206: ctrl-X on nvim-tree opens file in split window!!!
 207: // + ?? repeat last search!!!!
-208 ]i gives list of all instances of the word under the cursor!!!
-209: :vimgrep sausage _.js finds all sneks in current directory... :cn moves to next match!!!
+208 ]i gives list of all instances ]of the word under the cursor!!!
+209: :vimgrep sausage *.js finds all sneks in current directory... :cn moves to next match!!!
 and :clist gives us the list and :cc 12(etc) allows us to jump direct!!!
-210: to recursively do the same in subfolders :vimgrep sausage \*\*/_.js
+210: to recursively do the same in subfolders :vimgrep sausage **/*.js
 211: :match ErrorMsg /the/ turns every "the" match red!!!
 the pre-defined color schemes are • ErrorMsg • WarningMsg • ModeMsg • MoreMsg
 (there will be a way to edit color scheme color in the lua!!! )
@@ -247,9 +247,9 @@ the pre-defined color schemes are • ErrorMsg • WarningMsg • ModeMsg • Mo
 223:pu x -- is the same as "xp
 224: :s//~/ repeats last search!!!!(on line!!!)
 225: :setlocal spell --turns on spellchecker!!!!!
-226: [\[    \]][( ]) [{   ]{ etc all work with ydv etc!!!!
+226: [[    ]] [(  ]) [{   ]{ etc all work with ydv etc!!!!
 227:3H is 3 down from top of viewport...3L is 3 up!!!!
-&lt;&lt;doesn't work with M!!!!>>
+<<doesn't work with M!!!!>>
 228: :/pete/+3d deletes line 3 lines after pete match!!!
 229: v/om d/om c/om etc etc etc......
 230: :e # go back to previous file!!!
@@ -257,10 +257,10 @@ the pre-defined color schemes are • ErrorMsg • WarningMsg • ModeMsg • Mo
 232:saveas ~/some/path/: save your file to that locationvim
 233:gx opens web-links in browser!!!!!
 234: args a.txt b.txt c.txt creates list to operate on....then use argdo! :)
-235: :'&lt;,'>s/\\%Vfoo\\%V/bar/g --- this is the pattern for replace in vis-block mode
+235: :'<,'>s/\%Vfoo\%V/bar/g --- this is the pattern for replace in vis-block mode
 236: :sba turns all buffers into windows!!!!
-237:buffer delete trick :bd _.js ctrl-a + ctrl-a and all the js is gone!
 238: :bd 3 ----- closes buffer numero 3!!!! or :bd 35 or :bd 3,5
+237:buffer delete trick :bd *.js ctrl-a + ctrl-a and all the js is gone!
 239: :bufdo bd ------ nukes all buffers!!!
 240: :tabonly closes all tabs except present one!!!!
 241: :bufdo normal @a --- fire macros over multiple buffers
@@ -273,22 +273,21 @@ the S bomb in vb mode puts whatever on every line!!!! - in tag mode gives emmet 
 247:ga gives you data about  char under cursor....
 248: :%norm applies norm command to every line
 also works with "surround"!!!
-249:paste mechanism works as thus - "r(reg)-count-;command
 249: :g/cup/m$ --- move all matches with cup to the bottom :)!!!!
 250: highlight TrailingWhitespace ctermbg=red guibg=red
-call matchadd("TrailingWhitespace", '\\v\\s+$')
+call matchadd("TrailingWhitespace", '\v\s+$')
 251::e +10 some_file.py - open at specific line inside vim!!!
 252:how to use macros like smart-bombs-examples to follow....
+:'<,'>normal! @a
 10,15normal! @a
-:'&lt;,'>normal! @a
 :g/pattern/normal! @a
 253: yl ---> yank char!!!
 254:Xp (reverse backwards rather than forward)
 255: ctrl-a/k take counts...255: ctrl-a/k take counts...
 256:  ctrl-r + % gives us file name!!!
-257: in] il&lt; move to next one using "targets"
+257: in] il< move to next one using "targets"
 258: H + L take counts....
-259: :1,$......the whole bloody file.....!  
+259: :1,$......the whole bloody file.....!    
 260: ctrl page up/down trick works in VIM
 261: 50GV100G - highlights like command mode!!!
 262: :tab ball - opens all open buffers into tabs
@@ -318,12 +317,12 @@ e: classiclyh short nhand for open another file!
 (also ctrl-o stands for "old")
 284: changelist + count + num +g+; jumps tp change list item eg 2g;
 285: -2/+2 go to starts of line, J/K go above/below directly.....
-286:note that :-5,:y and :,+4y are quite different!!!  
+286:note that :-5,:y and :,+4y are quite different!!!   
 287: 1+ , 1- are nice analogues to O and ^!!!!!
 288:v === v34|-till-word 34 etc
 289: ctrl^ === alternated buffers....
 290: `(  etc goes to top pf sentence....
-291:`{ goes to start of paragraph
+291: `{ goes to start of paragraph
 (note last two hacks the equivalent of shift + (){}....)
 292:remember that "o" flips from top to bottom in V mode!!!
 293: 2gt etc tabs take motions....
@@ -333,10 +332,10 @@ e: classiclyh short nhand for open another file!
 297: arge booger.html adds booger to argument list....
 (works with multiple arguments on an empty list!!!!)
 298:first/last/next/previous are the :ex commands for args!!!
-299: :grep "willies" _.js ====> adds every instance of js to qf list!!!
-300: grep -r makes search recursive in directories.  _ is a wildcard on it's very own!!!
-ie grep -r "fist" \*
-301: Telescope ctrl-q sends telescope results to qf list!!!!
+299: :grep "willies" *.js ====> adds every instance of js to qf list!!!
+300: grep -r makes search recursive in directories.  * is a wildcard on it's very own!!!
+ie grep -r "fist" *
+301: Telescope ctrl-q sends telescope results to qf list!!!! 
 302: :cc60 - jump to the entry |60| on  list....
 303: :cdo s/foo/bar/g ----> global change command!!!!
 note | update would ususally write changes after regex but vim broked!!!
@@ -353,11 +352,86 @@ and :una ww reverses it!!!!
 313):.! date --- shoots output inyo file from ex
 314) bye yanks word....
 315) g:/biff/#      ==== gives local location list of search pattern
-316)It's not well documented - but the line operator is _ ie d\_ takes a line out!
-317)gc\_\_\_ is am operator on text objects (like gu/gU!!!)
+316)It's not well documented - but the line operator is _ ie d_ takes a line out!
+317)gc___ is am operator on text objects (like gu/gU!!!)
 318)you can have more than qf list :chi lists... :col/cnew allow jumping!
-319)Recursive search using VIM grep... :vimgrep TODO \*_/_
+319)Recursive search using VIM grep... :vimgrep TODO **/*
 320) ctrl-l is better than "clear" in terminal.....
 321)""p liberates text selexted with telescope clipboars chooser
-322) \`^ makes up for the missing "gi" capability on my present rig
+322) `^ makes up for the missing "gi" capability on my present rig
 also note....can be used as mark without changing text!!!!!
+333) %!uniq removes duplicates (my god AI found this one!!!)
+334)Use :g/^/m$ to reverse the order of lines in a buffer.
+335)use abs+10 or -10 to strike particular lines from present location!
+336)ctrl-w + r rotates windows :0!!!!
+337)Ctrl-w+ = equlaises all windows!!! 
+338) :g/toot/d =====> note that toot here is a regex!!!!!
+339)! sort -u also removes duplicates in a selection
+340)2dk - deletes upwards....obvious but useful
+341) :g/tabs/norm A// ----> gives us comments on all lines with "tabs"!!!!
+342) + and minus are like zero for the lines above/beneath!!!!!
+343)Easilt forgot d/regex y/regex ----also works for v mode!!!
+(don't forget the magic on the n-key but only in "V" mode!!!!)
+344)^$ is the regex for "blankline" ie
+:g/^%/norm A bunny gives us bunny on every blankline
+345) :g/app/norm O ========= puts equals line above every instance of app
+346)similar tactic for comments :g/app/norm O //this is an app
+347)Indent all lines that contain "for" with two spaces: :g/for/norm >>
+348)Remove all instances of "this" on lines that contain "class": :g/class/s/this//g
+349)Add a blank line above every line that contains "import": :g/import/norm O
+350)Remove all text after the word "stop" in all lines containing the word "go": :g/go/s/stop.*//
+351)Remove all lines containing both the words "red" and "green": :g/red/&&/green/d
+352)Remove all lines containing either the words "blue" or "yellow": :g/blue\|yellow/d
+353)Remove all lines not containing the word "hello": :g!/hello/d
+354)Move all lines containing the word "example" to the line before the last line: :g/example/m-2
+355)Remove all text before the word "stop" in all lines containing the word "go": :g/go/s/.*stop/stop/
+356)Remove all lines containing a number: :g/\d/d
+357)Move all lines containing the word "banana" to the end of the file: :g/banana/m$
+358)Sort all lines that contain "list" alphabetically: :g/list/sort
+359)Insert a new line after each line: :%g/.*/norm o
+360)Insert a new line before each line: :%g/.*/norm O
+361) :g/)/norm f)cib ===== this empties all curly brackets!!!   
+362) :%norm is a global file operator!!!
+363)Use :g/<pattern>/s/<search>/<replace>/g to replace <search> with <replace> on every line that matches <pattern>.
+364) ctrl x/a + number inc/decs by that much!!!!
+365) va} followed by :sort ----->sorts css rules!!!!
+366) g:/\/\\d is the comment destroyer royale!!!!!
+367) g:/^/ m '< ----will reverse every line of a section but the note one!!!
+368: "%p gives us the filename!!!! :0!!!
+369: :%ri align all text to right :%ce && :%le ar the others!
+370: ":p - prints last inserted text
+371: "_d sends the fuckers to oblivion!!!!(black hole register)
+372: :%norm csw"A: "", is MAGIC."  "preps strings into objects "
+373: :let @+=expand("%:p") puts canonical filepath in reg!
+("%#p") =====> gives us name
+374:or just use :r realpath % !!!!!
+375: ge is like "b" but always jumps to previous word!
+what i do is use Telescope live_grep to search for the particular thing i want to replaced then press <C-q> which adds all those files in quick-fix list then :cdo s/<find>/<replace>/g here <find> is the word you want to find and <replace> is which you want to replace with.
+cfdo is even better than cdo
+cdo will run a set of commands over each element in the quickfix list, while, :cfdo will run it over each file in the quickfix list. Therefore, we will not run the same command twice."
+:cfdo %s/ugly/funny-looking/g | update
+376: :-2t. ======== copy line -2 below present line!!!
+378: :.m$ --------move present line to bottom!!!
+379: y[[ y]] work as commands!!! (as does ygg yG)
+380: y-5 is like 5yy in reverse!!!
+381: ctrl o + ctrl o opens last edited file
+382: ctrl-p gives us autocomplete in insert mode
+383: ctrl[ is same as esc (for insert mode)
+383: :1 put b ========> posts reg b after line one
+383: in ex mode ctrl-w, ctrl-r  posts word under cursor
+or ctrl-a if we want the WORD!!!!
+384:u+ctrl-r takes us to lat change
+385: :colder and cnewer allow us to have multiple change lists!!!
+388: ctrl-n in insert mode gives use alternative options for a word!!!
+389: whole word search is /\<word + \>
+ie pyramid+bracket+word+slash+closing bracket (got that???)
+400: ctrl-O+O i=s move to next line in insert mode...and "o"
+386: ctrl-U is insert mode version of d0
+387: ctrl-J gives us line insert!!!!
+388: ctrl-H gives us insert mode delete!!!
+389: ctrl-W gives us delete word backwards....
+390: ctrl- arrow gives us word to word jump!!!!
+391: fn+home/end does 0/$ in insert mode!!!
+392: If you search using fi/fg/fh (etc), search can be fired elsewhere with ;/,!
+
+

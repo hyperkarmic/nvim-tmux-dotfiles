@@ -71,3 +71,8 @@ and gh does this in VIM!!!!!
 57) ctrl+shift+[ gives us fold capability....] reverses!!
 58) ctrl-1 gives use search, ctrl-0 original stuff and ctrl [/] jumps between activity bar
 59)alt-e opens side bar......
+60)ctrl-t gives us symbol search...
+61)ctrl-shift up/down now gives us terminal window resizing!!!!!
+62)ctrl+shift-5 splits terminal!!!!
+63)alt+number lets us jump directly to tab!!!
+
