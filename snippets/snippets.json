@@ -1,0 +1,13 @@
+{
+  "snippet1": {
+    "prefix": "lg",
+    "body": ["console.log(\"$1\")"],
+    "description": "Expand `log` to `console.log()`"
+  },
+
+  "snippet2": {
+    "prefix": "arr",
+    "body": ["()=>{}"],
+    "description": "gives me arr func"
+  }
+}

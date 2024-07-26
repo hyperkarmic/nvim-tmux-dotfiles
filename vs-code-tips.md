@@ -75,4 +75,4 @@ and gh does this in VIM!!!!!
 61)ctrl-shift up/down now gives us terminal window resizing!!!!!
 62)ctrl+shift-5 splits terminal!!!!
 63)alt+number lets us jump directly to tab!!!
-
+64) ctrl+k + e gives you open files....alt-e gives you project!!!

@@ -1,0 +1,75 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see ( all ) of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "nightly": {
+    "enabled": true,
+    "channel": "stable"
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true
+  },
+  "vim_mode": true,
+  "relative_line_numbers": true,
+
+  "wrap_guides": [80],
+  "theme": "Gruvbox Dark Hard",
+  "ui_font_size": 16,
+  "buffer_font_size": 20,
+  "tab_size": 2,
+  "cursor_blink": true,
+  "buffer_font_family": "JetBrains Mono",
+  "preferred_line_length": 80,
+  "buffer_line_height": "comfortable",
+  "ui_font_family": "JetBrains Mono",
+  "formatter": "prettier",
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "arrowParens": "avoid",
+    "proseWrap": "preserve",
+    "endOfLine": "lf"
+  },
+  "linter": "eslint",
+  "eslint": {
+    "enabled": true,
+    "autoFixOnSave": true,
+    "autoFixOnFormat": true,
+    "autoFixOnFormatDelay": 1500
+  },
+  "autosave": "on_focus_change",
+  "autosave_delay": 1500,
+  "autosave_on_focus_change": true,
+  "autosave_on_window_change": true,
+  "autosave_on_build": true,
+  "autosave_on_build_delay": 1500,
+  "autosave_on_build_events": ["build", "run", "debug"],
+  "autosave_on_build_events_delay": 1500,
+  "confirm_quit": false,
+  "background": "red",
+      "languages": {
+          "JavaScript": {
+            "code_actions_on_format": {
+                    "source.fixAll.eslint": true
+                  },
+            "format_on_save": {
+              "external": {
+                "command": "prettier",
+                "arguments": ["--stdin-filepath", "{buffer_path}"]
+              }
+            }
+          }
+        }
+}

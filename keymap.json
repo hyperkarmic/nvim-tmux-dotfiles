@@ -1,0 +1,26 @@
+
+[
+  {
+    "bindings": {
+      "space m": "workspace::ToggleLeftDock",
+      "space w": "file_finder::Toggle",
+      "space x": "workspace::ToggleVimMode",
+      "space e":  "project_panel::ToggleFocus",
+      "space s": "buffer_search::Deploy",
+      "ctrl-shift-{": "editor::Fold",
+        "ctrl-shift-}": "editor::UnfoldLines",
+         "shift-o": "project_panel::RevealInFileManager",
+        "x": "project_panel::Cut",
+           "c": "project_panel::Copy",
+           "p": "project_panel::Paste",
+           "d": "project_panel::Delete",
+           "n": "project_panel::NewFile",
+           "f": "project_panel::NewDirectory",
+           "r": "project_panel::Rename",
+           "shift-y": "project_panel::CopyRelativePath",
+           "g y": "project_panel::CopyPath",
+           "alt-k":"pane::ActivateNextItem",
+           "alt-j":"pane::ActivatePrevItem"
+    }
+        }
+]
