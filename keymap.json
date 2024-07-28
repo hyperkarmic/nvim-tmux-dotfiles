@@ -7,6 +7,7 @@
       "space x": "workspace::ToggleVimMode",
       "space e":  "project_panel::ToggleFocus",
       "space s": "buffer_search::Deploy",
+      "space t": "workspace::NewCenterTerminal",
       "ctrl-shift-{": "editor::Fold",
         "ctrl-shift-}": "editor::UnfoldLines",
          "shift-o": "project_panel::RevealInFileManager",
