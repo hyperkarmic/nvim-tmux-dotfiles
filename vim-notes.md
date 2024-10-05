@@ -354,15 +354,15 @@ note | update would ususally write changes after regex but vim broked!!!
 309)'m-3y etc.........:w
 310):'m+1 311) /whoops ======> y//e is the code to yank nohl areas!!!! 312) :ab ww ()=>{} works at session level!!!!!
 and :una ww reverses it!!!!
-313):.! date --- shoots output inyo file from ex
-314) bye yanks word....
-315) g:/biff/# ==== gives local location list of search pattern
+313):.! date --- shoots output inyo file from ex 314) bye yanks word.... 315) g:/biff/# ==== gives local location list of search pattern
 316)It's not well documented - but the line operator is _ ie d_ takes a line out!
-317)gc*\_\_ is am operator on text objects (like gu/gU!!!)
+317)gc\*\_\_ is am operator on text objects (like gu/gU!!!)
+
 <!-- 318)you can have more than qf list :chi lists... :col/cnew allow jumping! -->
 <!-- 319)Recursive search using VIM grep... :vimgrep TODO \**/* 320) ctrl-l is better than "clear" in terminal..... -->
 <!-- 321)""p liberates text selexted with telescope clipboars chooser 322) `^ makes up for the missing "gi" capability on my present rig -->
 <!-- also note....can be used as mark without changing text!!!!! 333) %!uniq removes duplicates (my god AI found this one!!!) -->
+
 334)Use :g/^/m$ to reverse the order of lines in a buffer.
 335)use abs+10 or -10 to strike particular lines from present location!
 336)ctrl-w + r rotates windows :0!!!!
@@ -372,8 +372,7 @@ and :una ww reverses it!!!!
 343)Easilt forgot d/regex y/regex ----also works for v mode!!!
 (don't forget the magic on the n-key but only in "V" mode!!!!)
 344)^$ is the regex for "blankline" ie
-:g/^%/norm A bunny gives us bunny on every blankline
-345) :g/app/norm O ========= puts equals line above every instance of app
+:g/^%/norm A bunny gives us bunny on every blankline 345) :g/app/norm O ========= puts equals line above every instance of app
 346)similar tactic for comments :g/app/norm O //this is an app
 347)Indent all lines that contain "for" with two spaces: :g/for/norm >>
 348)Remove all instances of "this" on lines that contain "class": :g/class/s/this//g
@@ -438,8 +437,9 @@ it automatically becomes :ju0
 :398: y2- yanks three lines up, y3- four etc
 :399 :2s/foo/bar is fireable elsewhere using &
 :400: 0000 + 3 + g + ctrl a === 3-6-9-12;
-:401 /foo/2 ----this would take me two lines after foo.  works neg!!! 
+:401 /foo/2 ----this would take me two lines after foo. works neg!!!
 :402 34z - makes 34 top line, also z+enter(top) and z-(bottom)!!!
+
 :403 colorscheme gruvbox-baby .....changes colorscheme!!!
 :403 90gM - goes to 90% of line - but gM is 50%!
 :404: dV% - destroys code block on top line (or bottom bracket) of code block
@@ -456,7 +456,11 @@ ctrl-0 + J retains insert mode.
 414:ctrl-n gives us snippets.
 415:ctrl-p gives us less impressive auto-complete.
 416 5z. - centers on line 5
-417: :$ === G *it's not just divers that go down!!!!!!!
-
-
- 
+417: :$ === G \*it's not just divers that go down!!!!!!!
+418: :-6y - yanks relative number
+NOTE THAT THIS THE OPPOSITE TO THE Editor word order
+:6-1y - yanks line 5!!!!
+419:gc- is a nice addition to the arsenal!
+420: *+# find exact matches. g*/# find partial matches 
+421: ZZ quites with saving ZQ quits without
+422:ctrl+space+w gives us visual t-mux set up!!!
