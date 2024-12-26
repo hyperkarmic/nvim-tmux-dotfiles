@@ -461,6 +461,37 @@ ctrl-0 + J retains insert mode.
 NOTE THAT THIS THE OPPOSITE TO THE Editor word order
 :6-1y - yanks line 5!!!!
 419:gc- is a nice addition to the arsenal!
-420: *+# find exact matches. g*/# find partial matches 
+420: _+# find exact matches. g_/# find partial matches
 421: ZZ quites with saving ZQ quits without
 422:ctrl+space+w gives us visual t-mux set up!!!
+423:Ultimate function grabber /\{[/s/S]_?\} and |([s/S/]_?\} as agglutinive
+424: alt+pjkl etc breaks directly out of insert mode.
+425:It eas too easy to forget g; +g, to navigate change list!
+:426 :grep foo + cope to access quicklist
+:427 :clist gives you the numbered version - which you can use :cc4 with
+:428 :lgrep for local list
+:429 :chistory gives us the search list.... :colder/:cnewer toggles
+:430: grep poo % searches only present file
+:432 :clist is global :llist is local
+:433 1gt 2gt 3gt 4gt as shortcuts!!!!!
+:434 llist/clist take up specific buffer space
+:435 grep foo % | clist - is how to open up qfix window automatically
+:436 :tab sbuffer69 takes Item from buffer list and opens in new tab!
+:437 :tab sbuffer opens present buffer in new tab
+:438: ctrl-t opens new file in tab in both NERDTREE and telescope!
+:439: tab sball - opens all buffers as tabs
+440: tabdo bdo ldo cdo etc.....
+441: :tabe foo.js - is how we Ex mode open into a tab
+442: sb 69 opens in split, but :vert sb69 does the verticle equivalent
+443: but sp/vsp open regular files --- sb is buffer!!!
+444: also tab sb15 will open buffer into tab
+445: but it has to be tabe foo.js when opening files
+446: to open two tabs at one :tabnew foo.js | bar.js
+:447 args foo.js bar.css or \*.js but :argadd foo.js to add to list
+then argdo can be used!!!!
+:448: argdelete kills the args list
+:449: argdel foo.txt removes item off the list
+:450 bdel works similar ie bdel foo.js
+:451: to keep quickfix on buffer list - move to other file then close split!!!
+:452: This works for local list too!!!!
+:453: argadd 69 (or whatever) adds to quickfix list to args!!!
